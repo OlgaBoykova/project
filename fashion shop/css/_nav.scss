@@ -1,0 +1,110 @@
+@import "_var.scss";
+@import "_mixins.scss";
+.main-nav {
+    border-top: 2px solid #e8e8e8;
+}
+.nav-wrapper {
+    width: 1170px;
+    padding: 0 15px;
+    /* border: 1px solid green; */
+    margin: 0 auto;
+  }
+.nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+.nav-link {
+    padding: 20px 20px 17px;
+    border-bottom: 3px solid transparent;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color:$black-color;
+    line-height: 26px;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: 0.3s;
+    &.nav-link:hover {
+        color: $main-pink-color;
+        border-bottom: 3px solid $main-pink-color;
+    }
+}
+.nav-item {
+    position: relative;
+}
+.drop {
+    transform: scaleY(0);
+    z-index: 1;
+    display: none;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 25px 25px;
+    background-color: $main-white-color;
+    border-radius: 0 0 5px 5px;
+    transition: 0.3;
+}
+.drop-col {
+    width: 235px;
+    margin-right: 25px;
+}
+.drop-header {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: #232323;
+    border-bottom: 1px solid #e8e8e8;
+}
+.drop-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.drop-link {
+    font-size: 14px;
+    line-height: 28px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: #646464;
+    text-decoration: none;
+    transition: $main-trans-time;
+    &:hover {
+        color: $main-pink-color;
+    }
+}
+.drop-super-sale-link {
+    display: inline-block;
+    width: 255px;
+    height: 118px;
+    background-image: url(../img/drop.png);
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    color: $main-white-color;
+    text-decoration: none;
+    margin-top: 15px;
+    padding-top: 55px;
+    padding-left: 174px;
+    box-sizing: border-box;
+    transition: $main-trans-time;
+    &:hover {
+        color: $main-pink-color;
+    } 
+}
+.drop-img {
+    margin-top: 22px;
+}
+.nav-item:hover .drop {
+    display: flex;
+    position: absolute;
+    transform: scaleY(1);
+}
+.nav-last-item:hover .drop {
+    right: 0; //выпадает налево
+}

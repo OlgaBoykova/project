@@ -1,0 +1,8 @@
+@mixin site-size  {
+    width: 1140px;
+    margin: 0 auto;
+  }
+@mixin clear-position {
+  margin: 0;
+  padding: 0;
+}
